@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+    color: white;
+}
+
+.logocontainer {
+    flex: 1;
+}
+
+.logo {
+    font-size: 30px;
+    color: aqua;
+}
+
+.menucontainer {
+    flex: 6;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item {
+    margin-right: 20px;
+    padding: 10px 15px; /* Add padding for better spacing */
+    color: white; /* Default text color */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transitions */
+}
+
+.menu-list-item.active {
+    color: aqua; /* Text color for active item */
+    background-color: #333; /* Optional: Background color for active item */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.menu-list-item:hover {
+    color: aqua; /* Text color on hover */
+    background-color: #222; /* Slightly different background color on hover */
+}
+
+.profilecontainer {
+    flex: 1; display:flex;
+    align-items:center;
+    
+    justify-content: flex-end;
+}
+
+.profile-text-container{
+   margin:0 20px;
+}
+.profile-picture{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    object-fit:cover;
+}
+
+.toggle{
+    width:40px;
+    height:20px;
+    border-radius:30px;
+    background-color: white;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-icon{
+    color:goldenrod;
+}
+
+.toggle-ball{
+    width:18px;
+    height:18px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+    right:1px;
+}
+
+.sidebar {
+    width: 50px;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    display:flex;
+    flex-direction:column;
+    padding-top:60px;
+    align-items:center;
+}
+
+.sidebar .left-menu-icon {
+    color: white;
+    font-size:20px;
+    margin-bottom:40px;
+}
+
+.container{
+    background-color: black;
+   min-height:calc(100vh - 50px);
+    width:calc(100vw-50px);
+    color:white;
+}
+
+.featured-content{
+    height:50vh;
+    padding:50px;
+
+}
+
+.featured-title{
+    margin-left:50px;
+    width:200px;
+  
+}
+.featured-desc{
+    margin-left:50px;
+    width:500px;
+    color:lightgray;
+    margin:30px 0;
+}
+
+.watched{
+    margin-left:50px;
+    padding:10px 20px;
+    background-color: green;
+    border:none;
+    color:white;
+    font-weight:bold;
+}
+
+.movie-list-container{
+    margin-left:50px;
+    padding:20px 20px;
+}
+
+.movie-list{
+    display:flex;
+    align-items:center;
+    height:300px;
+}
+
+.movie-list-item{
+    margin-right:30px;
+    position:relative;
+   
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform:scale(1.2);
+    margin:0 30px;
+    opacity:0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+    opacity:1;
+}
+
+.movie-list-item-img{
+     transition:all 1s ease-in-out;
+    width:270px;
+    height:200px;
+    object-fit: cover;
+}
+
+.movie-list-item-title{
+    background-color: #333;
+    padding:0 30px;
+    font-size:32px;
+    font-weight:bold;
+    position: absolute;
+    top:10%;
+    left:50px;
+    z-index:2;
+    opacity:0;
+}
+
+.movie-list-desc{
+    background-color: #333;
+    padding:10px;
+    font-size:14px;
+    
+    position:absolute;
+    top:40%;
+    left:50px;
+    z-index:1;
+    opacity:0;
+}
+
+.movie-list-item-button {
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    border-radius: 10px;
+    outline:none;
+    border:none;
+    cursor:pointer;
+    position:absolute;
+    bottom:40px;
+    left:50px;
+    opacity:0;
+   
+  }
